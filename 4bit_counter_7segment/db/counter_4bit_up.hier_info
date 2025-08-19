@@ -1,0 +1,42 @@
+|counter_4bit_up
+clk => clk.IN1
+clr_n => clr_n.IN1
+seg_out[0] <= bin7seg:SEG.seg_out
+seg_out[1] <= bin7seg:SEG.seg_out
+seg_out[2] <= bin7seg:SEG.seg_out
+seg_out[3] <= bin7seg:SEG.seg_out
+seg_out[4] <= bin7seg:SEG.seg_out
+seg_out[5] <= bin7seg:SEG.seg_out
+seg_out[6] <= bin7seg:SEG.seg_out
+seg_out[7] <= bin7seg:SEG.seg_out
+
+
+|counter_4bit_up|counter4:COUNT
+clk => qout[0]~reg0.CLK
+clk => qout[1]~reg0.CLK
+clk => qout[2]~reg0.CLK
+clk => qout[3]~reg0.CLK
+clr_n => qout[0]~reg0.ACLR
+clr_n => qout[1]~reg0.ACLR
+clr_n => qout[2]~reg0.ACLR
+clr_n => qout[3]~reg0.ACLR
+qout[0] <= qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[1] <= qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[2] <= qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[3] <= qout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter_4bit_up|bin7seg:SEG
+qout[0] => Decoder0.IN3
+qout[1] => Decoder0.IN2
+qout[2] => Decoder0.IN1
+qout[3] => Decoder0.IN0
+seg_out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

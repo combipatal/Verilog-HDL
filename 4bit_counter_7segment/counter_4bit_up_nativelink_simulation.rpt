@@ -1,0 +1,152 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneive
+Quartus root          :  c:/intelfpga_lite/24.1std/quartus/bin64/
+Quartus sim root      :  c:/intelfpga_lite/24.1std/quartus/eda/sim_lib
+Simulation Tool       :  questa intel fpga
+Simulation Language   :  verilog
+Simulation Mode       :  GUI
+Sim Output File       :  counter_4bit_up.vo
+Sim SDF file          :  counter_4bit_up__verilog.sdo
+Sim dir               :  simulation\questa
+
+=======================================================
+
+Info: Starting NativeLink simulation with Questa Intel FPGA software
+Sourced NativeLink script c:/intelfpga_lite/24.1std/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File counter_4bit_up_run_msim_gate_verilog.do already exists - backing up current file as counter_4bit_up_run_msim_gate_verilog.do.bak8
+Probing transcript
+Questa Intel FPGA Info: # Reading pref.tcl
+Questa Intel FPGA Info: # //  Questa Intel Starter FPGA Edition-64
+Questa Intel FPGA Info: # //  Version 2024.3 win64 Sep 10 2024
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # // Unpublished work. Copyright 2024 Siemens
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # // This material contains trade secrets or otherwise confidential information
+Questa Intel FPGA Info: # // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+Questa Intel FPGA Info: # // "SISW"), or its licensors. Access to and use of this information is strictly
+Questa Intel FPGA Info: # // limited as set forth in the Customer's applicable agreements with SISW.
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # // This material may not be copied, distributed, or otherwise disclosed outside
+Questa Intel FPGA Info: # // of the Customer's facilities without the express written permission of SISW,
+Questa Intel FPGA Info: # // and may not be used in any way not expressly authorized by SISW.
+Questa Intel FPGA Info: # //
+Questa Intel FPGA Info: # do counter_4bit_up_run_msim_gate_verilog.do
+Questa Intel FPGA Info: # if {[file exists gate_work]} {
+Questa Intel FPGA Info: # 	vdel -lib gate_work -all
+Questa Intel FPGA Info: # }
+Questa Intel FPGA Warning: # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is hyeok@HYEOK.
+Questa Intel FPGA Info: # vlib gate_work
+Questa Intel FPGA Warning: # ** Warning: (vlib-34) Library already exists at "gate_work".
+Questa Intel FPGA Info: # Errors: 0, Warnings: 1
+Questa Intel FPGA Info: # vmap work gate_work
+Questa Intel FPGA Info: # Questa Intel Starter FPGA Edition-64 vmap 2024.3 Lib Mapping Utility 2024.09 Sep 10 2024
+Questa Intel FPGA Info: # vmap work gate_work 
+Questa Intel FPGA Info: # Copying C:/altera/24.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+Questa Intel FPGA Info: # Modifying modelsim.ini
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # vlog -vlog01compat -work work +incdir+. {counter_4bit_up.vo}
+Questa Intel FPGA Info: # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Questa Intel FPGA Info: # Start time: 18:23:04 on Aug 19,2025
+Questa Intel FPGA Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+." counter_4bit_up.vo 
+Questa Intel FPGA Info: # -- Compiling module counter_4bit_up
+Questa Intel FPGA Info: # -- Compiling module hard_block
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # Top level modules:
+Questa Intel FPGA Info: # 	counter_4bit_up
+Questa Intel FPGA Info: # End time: 18:23:04 on Aug 19,2025, Elapsed time: 0:00:00
+Questa Intel FPGA Info: # Errors: 0, Warnings: 0
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # vlog -vlog01compat -work work +incdir+C:/altera/project/pro1 {C:/altera/project/pro1/counter_4bit_up_tb.v}
+Questa Intel FPGA Info: # Questa Intel Starter FPGA Edition-64 vlog 2024.3 Compiler 2024.09 Sep 10 2024
+Questa Intel FPGA Info: # Start time: 18:23:04 on Aug 19,2025
+Questa Intel FPGA Info: # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/altera/project/pro1" C:/altera/project/pro1/counter_4bit_up_tb.v 
+Questa Intel FPGA Info: # -- Compiling module counter_4bit_up_tb
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # Top level modules:
+Questa Intel FPGA Info: # 	counter_4bit_up_tb
+Questa Intel FPGA Info: # End time: 18:23:04 on Aug 19,2025, Elapsed time: 0:00:00
+Questa Intel FPGA Info: # Errors: 0, Warnings: 0
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs="+acc"  counter_4bit_up_tb
+Questa Intel FPGA Info: # vsim -t 1ps -L altera_ver -L cycloneive_ver -L gate_work -L work -voptargs=""+acc"" counter_4bit_up_tb 
+Questa Intel FPGA Info: # Start time: 18:23:05 on Aug 19,2025
+Questa Intel FPGA Info: # ** Note: (vsim-3812) Design is being optimized...
+Questa Intel FPGA Warning: # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+Questa Intel FPGA Info: # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+Questa Intel FPGA Info: # Loading work.counter_4bit_up_tb(fast)
+Questa Intel FPGA Info: # Loading work.counter_4bit_up(fast)
+Questa Intel FPGA Info: # Loading work.hard_block(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_io_obuf(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_io_ibuf(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_clkctrl(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_mux41(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_ena_reg(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_io_ibuf(fast__1)
+Questa Intel FPGA Info: # Loading altera_ver.dffeas(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__1)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__2)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__3)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__4)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__5)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__6)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__7)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__8)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__9)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__10)
+Questa Intel FPGA Warning: # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (7) for port 'seg_out'. The port definition is at: counter_4bit_up.vo(35).
+Questa Intel FPGA Info: #    Time: 0 ps  Iteration: 0  Instance: /counter_4bit_up_tb/COUNTER_4 File: C:/altera/project/pro1/counter_4bit_up_tb.v Line: 9
+Questa Intel FPGA Info: # 
+Questa Intel FPGA Info: # add wave *
+Questa Intel FPGA Warning: # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+Questa Intel FPGA Info: #           File in use by: hyeok  Hostname: HYEOK  ProcessID: 2576
+Questa Intel FPGA Info: #           Attempting to use alternate WLF file "./wlft5hn5j4".
+Questa Intel FPGA Warning: # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+Questa Intel FPGA Info: #           Using alternate file: ./wlft5hn5j4
+Questa Intel FPGA Info: # view structure
+Questa Intel FPGA Info: # .main_pane.structure.interior.cs.body.struct
+Questa Intel FPGA Info: # view signals
+Questa Intel FPGA Info: # .main_pane.objects.interior.cs.body.tree
+Questa Intel FPGA Info: # run 200 ns
+Questa Intel FPGA Info: add wave -position end  sim:/counter_4bit_up_tb/COUNTER_4/\COUNT|qout 
+Questa Intel FPGA Info: run 200ns
+Questa Intel FPGA Info: run 100ns
+Questa Intel FPGA Info: run100ns
+Questa Intel FPGA Info: # invalid command name "run100ns"
+Questa Intel FPGA Info: run 100ns
+Questa Intel FPGA Info: run 100ns
+Questa Intel FPGA Info: restart
+Questa Intel FPGA Info: # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+Questa Intel FPGA Info: # ** Note: (vsim-8009) Loading existing optimized design _opt1
+Questa Intel FPGA Info: # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+Questa Intel FPGA Info: # Loading work.counter_4bit_up_tb(fast)
+Questa Intel FPGA Info: # Loading work.counter_4bit_up(fast)
+Questa Intel FPGA Info: # Loading work.hard_block(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_io_obuf(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_io_ibuf(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_clkctrl(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_mux41(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_ena_reg(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_io_ibuf(fast__1)
+Questa Intel FPGA Info: # Loading altera_ver.dffeas(fast)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__1)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__2)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__3)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__4)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__5)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__6)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__7)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__8)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__9)
+Questa Intel FPGA Info: # Loading cycloneive_ver.cycloneive_lcell_comb(fast__10)
+Questa Intel FPGA Warning: # ** Warning: (vsim-3015) [PCDPC] - Port size (8) does not match connection size (7) for port 'seg_out'. The port definition is at: counter_4bit_up.vo(35).
+Questa Intel FPGA Info: #    Time: 0 ps  Iteration: 0  Instance: /counter_4bit_up_tb/COUNTER_4 File: C:/altera/project/pro1/counter_4bit_up_tb.v Line: 9
+Questa Intel FPGA Info: run 200ns
+Questa Intel FPGA Info: # End time: 18:37:57 on Aug 19,2025, Elapsed time: 0:14:52
+Questa Intel FPGA Info: # Errors: 0, Warnings: 2
+Info: NativeLink simulation flow was successful
