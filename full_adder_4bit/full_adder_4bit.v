@@ -1,12 +1,23 @@
- module full_adder_4bit (a,b,sel);
+ /* 
+ a : 입력값 : SW 0123  sw4는 간격을 두기 위해 설정하지 않음
+ b : 입력값 : sw 5678
+ sel : 0이면 덧셈 1이면 뺄셈 : 뺄쎔일때 음수라면 cout = 1이 된다.
+ sum : 출력값 : 4비트의 합
+ cout : 4비트를 초과하는 올림값,sum이 16이상이라면 1, 16이하라면 0이된다. 
+ */
+  module full_adder_4bit (a,b,sel,seg_out1,seg_out2,led);
   
  input [3:0] a,b;
  input sel;
+ 
+ output [6:0] seg_out1,seg_out2;
+ output [7:0] led;
+ 
+ reg [7:0] led;
+ 
  wire [2:0] Wcout;
  wire [3:0] bin,sum; 
- wire [6:0] seg_out1,seg_out2;
- wire [7:0] led;
- wire cout; //시뮬레이션용 코드 -> 업로드시 수정
+ wire cout; 
 
  
  full_adder ADD1 (.a(a[0]),.b(bin[0]),.cin(sel),.sum(sum[0]),.cout(Wcout[0]));
@@ -22,13 +33,14 @@
  bin7seg SEG_SUM (.qout(sum), .seg_out(seg_out1));
  bin7seg SEG_Cout (.qout(cout), .seg_out(seg_out2));
  
- assign led[0] = a[0];
- assign led[1] = a[1];
- assign led[2] = a[2];
- assign led[3] = a[3];
- assign led[4] = b[0];
- assign led[5] = b[1];
- assign led[6] = b[2];
- assign led[7] = b[3];
-
+ always@(*)begin
+   led[0] = a[0];
+	led[1] = a[1];
+	led[2] = a[2];
+	led[3] = a[3];
+	led[4] = b[0];
+	led[5] = b[1];
+	led[6] = b[2];
+	led[7] = b[3];
+end
  endmodule
