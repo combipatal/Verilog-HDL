@@ -11,7 +11,7 @@ always@(posedge clk or negedge clr_n)
 		if (clr_n == 0)
 			down_count <= 4'b1111;
 		else 
-			down_count <= down_count - 4'b1;
+			down_count <= down_count - 4'b0001;
 	end
 
 endmodule
