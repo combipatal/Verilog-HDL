@@ -75,7 +75,7 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id counter_4bit
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "200 ns" -section_id counter_4bit_up_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME counter_4bit_up_tb -section_id counter_4bit_up_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE counter_4bit_up_tb.v -section_id counter_4bit_up_tb
-set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY ON -section_id eda_simulation
+set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY OFF -section_id eda_simulation
 set_global_assignment -name VERILOG_FILE "time division.v"
 set_global_assignment -name VERILOG_FILE counter4.v
 set_global_assignment -name VERILOG_FILE counter_4bit_up.v
