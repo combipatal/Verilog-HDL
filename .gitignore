@@ -78,3 +78,7 @@ work/
 *.vcd
 transcript
 fsm_coverage.dat
+
+#video
+*.mov
+*.mp4
