@@ -1,8 +1,10 @@
 // time division
 //clk_div CDIV(.clk(clk), .clr_n(clr_n), .clk_1hz(clk_1hz));
-module clk_div (clk, clr_n, clk_1hz);
-	input clk, clr_n;
-	output clk_1hz;
+module clk_div (
+	input clk, 
+	input clr_n, 
+	output clk_1hz);
+
 	reg clk_1hz;
 	reg [26:0] clk_cnt;
 
