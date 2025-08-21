@@ -34,7 +34,7 @@
  bin7seg SEG_Cout (.qout(cout), .seg_out(seg_out2));
  
  always@(*)begin
-   led[0] = a[0];
+    led[0] = a[0];
 	led[1] = a[1];
 	led[2] = a[2];
 	led[3] = a[3];
