@@ -88,12 +88,7 @@ fsm_coverage.dat
 *.hw/
 *.ip_user_files/
 *.runs/
-*.srcs/sources_1/bd/*/hw_handoff/
-*.srcs/sources_1/bd/*/hdl/
-*.srcs/sources_1/bd/*/ip/
-*.srcs/sources_1/bd/*/sim/
-*.srcs/sources_1/bd/*/synth/
-*.srcs/sources_1/bd/*/ui/
+
 
 # Vivado Log and Journal Files
 webtalk*.jou
