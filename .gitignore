@@ -82,3 +82,44 @@ fsm_coverage.dat
 #video
 *.mov
 *.mp4
+
+# Vivado auto-generated project directories
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.srcs/sources_1/bd/*/hw_handoff/
+*.srcs/sources_1/bd/*/hdl/
+*.srcs/sources_1/bd/*/ip/
+*.srcs/sources_1/bd/*/sim/
+*.srcs/sources_1/bd/*/synth/
+*.srcs/sources_1/bd/*/ui/
+
+# Vivado Log and Journal Files
+webtalk*.jou
+webtalk*.log
+vivado*.jou
+vivado*.log
+vivado*.str
+vivado.pb
+vivado.pid
+
+# Final output files (Bitstream, etc.)
+*.bit
+*.bin
+*.ltx
+*.mcs
+*.prm
+*.sysdef
+
+# Simulation files
+*.wdb
+*.wcfg
+xsim.dir/
+
+# Vitis / HLS files
+.metadata/
+hls/
+.Xil/
+_x/
+.hbs/
