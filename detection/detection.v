@@ -30,11 +30,11 @@ module detection(
     reg [2:0] state;
     reg [2:0] next_state;
     
-    parameter  start = 3'd00;
-    parameter  st1 = 3'd1;
-    parameter  st2 = 3'd2;
-    parameter  st3 = 3'd3;
-    parameter  st4 = 3'd4;    
+    parameter  start = 3'b000;
+    parameter  st1 = 3'b001;
+    parameter  st2 = 3'b010;
+    parameter  st3 = 3'b011;
+    parameter  st4 = 3'b100;    
     
    // clk_div CLK(.clk(clk), .clr_n(rst_n), .clk_enable(clk_1C));
 
@@ -66,9 +66,10 @@ module detection(
         if(!rst_n) begin
             state <= start; 
             
-        end else if (din_bit) begin 
+        end else begin 
 				state <= next_state;
-				detect_out <= next_state;
+					if (next_state == st4) detect_out <= 1'b1;
+					else detect_out <= 0;
 				end
     end
     
